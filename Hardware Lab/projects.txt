@@ -1,0 +1,73 @@
+P1. 16-bit Floating point multiplier for IEEE format
+
+P2. 16-bit Floating point adder for IEEE format
+
+P3: CAM: content addressable memory. build CAM1 and CAM2. output of both are concatenated and this becomes address of RAM. read that RAM location and send as output. Inputs to CAM come from outside and you can preload the data in CAM1 and CAM2 with distinct values.
+
+P4: In a 256 bit wide data packet, identify bytes which have zero data content. Remove them and compress the data. Create a meta data to detect which bytes are removed from the packet. Use this meta-data to reconstruct the packet. Output-1 compressed packer and Output-2 decompressed packet.
+
+P5: Create a 16-entry data cache and implement LRU replacement policy. Preload the cache with some content. Input will be values to read and output will be hit/miss. Input will be data to insert along with set-ID and you have to remove the LRU data and insert new data. Testbench should show proofs of old and new data content and which data is selected as LRU.
+
+P6: FIFO buffer design as circular queue. Inputs will be data to insert along with write-signal and output is data output when read-signal is sent. Other outputs are head and tail pointers of the queue. Testbench should demonstrate the queue getting filled and correct data getting output, and data getting inserted at correct position in the circular queue. it should have queue-empty and full checks.
+
+P7: Round robin bus arbitration. Show the requests and grants hapenning. Use 4 ports asking for bus. arbiter will grant in round robin manner. The port will send data packet once granted and it will send a bus-release to the arbiter. only after bus is released you have to allow another port to use the bus (if it has a pending request). testbench should demonstrate all possible combinations. output should also be shown using waveform interface.
+
+P8:
+Compression/Decompression based on the removal of the Most Frequent Words from a Cache line :
+A cache line (64 bytes in size) contains 16 words, each of 4 bytes. In most of the modern real-world applications,
+we found that the words are often repeated. These repeated words can be removed from the cache lines to make them compressed.
+
+Problem statement:
+For an incoming cache line, the most frequently occurring word can be written only once while removing their later occurrences.
+This word is known as the Most Frequently Occurring Word (MFW).
+
+Meta-data associated with the compression and decompression :
+
+-The index of the first occurrence of the MFW is called the MFW index.
+-A 16-bit vector is taken per word called MFWtagArray[16]
+
+
+
+====================================
+         Submission Information
+====================================
+Deadline is around 2-April.
+Schedule for presentation will be given closer to the time.
+The schedule will have presentations of 3-4 groups per day over one week.
+
+2-3 page PDF of report:
+report must have the design/diagram, ASM charts (if any), logic/flow-chart of coding.
+1-2 para about the design and where it is used in real life.
+
+during submission
+  10 mins. PPT presentation of work done
+  demo of code and testbench
+  viva
+
+Files to submit = report.PDF,  program.v , program_testbench.v files, slides.ppt
+instruction about where to submit will be sent in due course.
+
+====================================
+  Allocation of groups to projects
+====================================
+
+Project no.    Group-IDs
+----------   -------------
+
+P1 = 1, 9, 26
+
+P2 = 3, 5, 11
+
+P3 = 8, 12, 17, 18
+
+P4 = 13, 14, 21, 22
+
+P5 = 6, 15, 20
+
+P6 = 7, 10, 19
+
+P7 = 2, 4, 24
+
+P8 = 16, 23, 25, 27
+
+====================================

@@ -1,0 +1,5 @@
+https://www.personal.kent.edu/~rmuhamma/Algorithms/algorithm.html
+
+https://www.geeksforgeeks.org/matrix-chain-multiplication-dp-8/
+
+https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
